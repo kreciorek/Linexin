@@ -1,0 +1,22 @@
+${c1}                                         
+${c1} HHHH                                  HHHH 
+${c1}GHHHHHH                              HHHHHH 
+${c1}HHHG HHHHG                        GHHHH GHHH
+${c1}GHH    GHHHG                    GHHHG    HHG
+${c1} HH      HHHHG                HHHHH      HH 
+${c1} HH       HHHHHG            HHHHHH       HH 
+${c1}  HH       HHHHHHH        HHHHHHH       HH  
+${c1}  HHH       HHHHHHHH    HHHHHHHH       HHH  
+${c1}   HHG       HHHHHHHH  HHHHHHHH       HHH   
+${c1}    HHH       HHHHHHH  HHHHHHH       HHH    
+${c1}     HHH        HHHHH  HHHHH        HHH     
+${c1}      HHH        GHHH  HHHG        HHH      
+${c1}        HHG                      GHH        
+${c1}                HHG      GHH                
+${c1}                GHHH    HHHF                
+${c1}               H     HH     H               
+${c1}             H    HHHHHHHH    H             
+${c1}                   HHHHHH                   
+                                            
+                                            
+                                            

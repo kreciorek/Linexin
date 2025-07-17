@@ -1,0 +1,22 @@
+$1                                         
+$1 HHHH                                  HHHH 
+$1 GHHHHHH                              HHHHHH 
+$1 HHHG HHHHG                        GHHHH GHHH
+$1 GHH    GHHHG                    GHHHG    HHG
+$1  HH      HHHHG                HHHHH      HH 
+$1  HH       HHHHHG            HHHHHH       HH 
+$1   HH       HHHHHHH        HHHHHHH       HH  
+$1   HHH       HHHHHHHH    HHHHHHHH       HHH  
+$1    HHG       HHHHHHHH  HHHHHHHH       HHH   
+$1     HHH       HHHHHHH  HHHHHHH       HHH    
+$1      HHH        HHHHH  HHHHH        HHH     
+$1       HHH        GHHH  HHHG        HHH      
+$1         HHG                      GHH        
+$1                 HHG      GHH                
+$1                 GHHH    HHHF                
+$1                H     HH     H               
+$1              H    HHHHHHHH    H             
+$1                    HHHHHH                   
+                                            
+                                            
+                                            
