@@ -1,0 +1,44 @@
+---
+componentName:  Linexin
+
+welcomeStyleCalamares:   false
+
+welcomeExpandingLogo:   true
+
+windowExpanding:    noexpand
+
+windowSize: 1050px,700px
+
+windowPlacement: center
+
+sidebar: widget
+
+navigation: widget
+
+strings:
+    productName:         Linexin
+    shortProductName:    Linexin
+    version:             0-1
+    shortVersion:        2025.07.16
+    versionedName:       Linexin
+    shortVersionedName:  Linexin-A
+    bootloaderEntryName: Linexin
+
+images:
+    productIcon:            "logo.png"
+    productLogo:            "squid.png"
+    productWelcome:         "idioma.png"
+
+style:
+   SidebarBackground:        "#000000"
+   SidebarText:              "#FFFFFF"
+   SidebarTextCurrent:       "#292F34"
+   SidebarBackgroundCurrent: "#D35400"
+
+slideshow:               "show.qml"
+
+slideshowAPI: 2
+
+uploadServer :
+    type :    "fiche"
+    url :     "http://termbin.com:9999"

@@ -160,3 +160,7 @@ qt6-base
 kcrash
 kpackage
 util-linux
+flatpak
+vulkan-radeon
+paru
+
