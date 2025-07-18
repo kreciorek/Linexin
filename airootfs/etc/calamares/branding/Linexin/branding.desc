@@ -18,10 +18,10 @@ navigation: widget
 strings:
     productName:         Linexin
     shortProductName:    Linexin
-    version:             0-1
-    shortVersion:        2025.07.16
+    version:             0.1
+    shortVersion:        2025.07.18
     versionedName:       Linexin
-    shortVersionedName:  Linexin-A
+    shortVersionedName:  Linexin
     bootloaderEntryName: Linexin
 
 images:

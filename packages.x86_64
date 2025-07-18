@@ -152,7 +152,6 @@ qemu-guest-agent
 nvidia-open
 gnome
 networkmanager
-xorg
 network-manager-applet
 git
 cargo
@@ -165,4 +164,5 @@ vulkan-radeon
 paru
 firefox
 extension-manager
+gnome-tweaks
 
