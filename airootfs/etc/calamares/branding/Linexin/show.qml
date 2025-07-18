@@ -21,7 +21,7 @@ Presentation
     Rectangle {
         id: mybackground
         anchors.fill: parent
-        color: Branding.styleString(Branding.SidebarBackground)
+        color: none
         z: -1
     }
 
