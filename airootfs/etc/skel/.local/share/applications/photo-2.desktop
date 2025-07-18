@@ -5,7 +5,7 @@ Comment=
 Exec=rum affinity-wine $HOME/.wineAffinity wine '$HOME/.wineAffinity/drive_c/Program Files/Affinity/Photo 2/Photo.exe'
 # Change the rum [version] and the [USER] paths to the right directory
 
-Icon=$HOME/.local/share/applications/icon.png
+Icon=/usr/share/linexin-icons/affinity.png
 # Get any png or svg of the logo to add it here; To use your current icon-pack simply use the icon's name without the file extension, eg. 'affinity-publisher-2'
 
 Categories=Graphics

@@ -1,0 +1,2 @@
+[org/gnome/shell]
+enabled-extensions=['accent-directories@taiwbi.com', 'blur-my-shell@aunetx', 'dash-to-dock@micxgx.gmail.com']
