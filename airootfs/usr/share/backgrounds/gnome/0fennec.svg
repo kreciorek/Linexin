@@ -9,7 +9,7 @@
    id="svg1"
    xml:space="preserve"
    inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
-   sodipodi:docname="fennec.svg"
+   sodipodi:docname="0fennec.svg"
    inkscape:export-filename="adwaita-d.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -26,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#505050"
      inkscape:document-units="px"
-     inkscape:zoom="0.17968701"
-     inkscape:cx="3169.3999"
-     inkscape:cy="1566.613"
+     inkscape:zoom="0.71874804"
+     inkscape:cx="3514.4444"
+     inkscape:cy="1835.8311"
      inkscape:window-width="2560"
      inkscape:window-height="1366"
      inkscape:window-x="0"
@@ -58,7 +58,7 @@
        x="-1.5617881"
        y="-0.52059484" /><g
        id="g1"
-       transform="matrix(1.5084813,0,0,1.5084813,809.90852,378.98123)"><g
+       transform="matrix(1.5084813,0,0,1.4567959,809.90852,388.8844)"><g
          inkscape:label="Layer 1"
          id="layer1-2"><ellipse
            style="fill:#ffffff;fill-opacity:1;stroke-width:0.264583"

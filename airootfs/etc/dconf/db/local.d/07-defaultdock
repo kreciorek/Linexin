@@ -1,0 +1,2 @@
+[org/gnome/shell]
+favorite-apps=['calamares.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Weather.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Shell.Extensions.desktop']

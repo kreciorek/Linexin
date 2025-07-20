@@ -17,5 +17,5 @@ echo "Initializing sequence."
 IFS='=' read -ra frames <<< $(cat /usr/bin/frames.txt)
 for frame in "${frames[@]}"; do
 	call_bsod "$frame"
-	sleep 0.01
+	sleep 0.03
 done
