@@ -1,0 +1,2 @@
+[org/gnome/shell/extensions/arch-update]
+update-cmd='linexin-updater'
