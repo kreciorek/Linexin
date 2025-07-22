@@ -2,10 +2,10 @@
 Name=Designer 2
 GenericName=Designer on Wine
 Comment=
-Exec=rum wine-affinity $HOME/.WineAffinity wine '$HOME/.WineAffinity/drive_c/Program Files/Affinity/Designer 2/Designer.exe'
+Exec=rum wine-affinity $HOME/.WineAffinity wine $HOME'/.WineAffinity/drive_c/Program Files/Affinity/Designer 2/Designer.exe'
 # Change the rum [version] and the [USER] paths to the right directory
 
-Icon=/usr/share/linexin-icons/designer.png
+Icon=/usr/share/icons/designer.png
 # Get any png or svg of the logo to add it here; To use your current icon-pack simply use the icon's name without the file extension, eg. 'affinity-publisher-2'
 
 Categories=Graphics
