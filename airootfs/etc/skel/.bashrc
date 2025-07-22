@@ -112,3 +112,103 @@ shopt -s expand_aliases
 shopt -s histappend
 
 alias fastfetch="fastfetch -l /usr/share/ascii/ascii_fast.txt --logo-color-1 '38;2;198;174;235'"
+
+confirm_makepkg() {
+    local PKGFILE="./PKGBUILD"
+
+    if [[ ! -f "$PKGFILE" ]]; then
+        echo "No PKGBUILD found in current directory."
+        return 1
+    fi
+
+    # Show PKGBUILD content
+    cat "$PKGFILE"
+
+    # Red colored warning using ANSI escape codes
+    echo -e "
+\033[1;31mATTENTION!
+   
+You are about to prepare a package out of the safe repository. 
+Please read the PKGBUILD file provided above CAREFULLY before proceeding further! 
+Otherwise you may get your operating system infected with malware or make it unstable.
+Do you want to continue? (Y/N)\033[0m"
+
+    # Prompt for user input
+    read -r -n 1 answer
+    echo  # move to new line
+
+    if [[ "$answer" == [Yy] ]]; then
+        makepkg "$@"
+    else
+        echo "Aborted."
+        return 0
+    fi
+}
+
+# Create alias to use the function
+alias makepkg='confirm_makepkg'
+
+confirm_paru() {
+    local PKGFILE="./PKGBUILD"
+
+    if [[ ! -f "$PKGFILE" ]]; then
+        echo "No PKGBUILD found in current directory."
+        return 1
+    fi
+
+    # Show PKGBUILD content
+    cat "$PKGFILE"
+
+    # Red colored warning using ANSI escape codes
+    echo -e "
+\033[1;31mATTENTION!
+   
+You are about to prepare a package out of the safe repository. 
+Please read the PKGBUILD file provided above CAREFULLY before proceeding further! 
+Otherwise you may get your operating system infected with malware or make it unstable.
+Do you want to continue? (Y/N)\033[0m"
+
+    # Prompt for user input
+    read -r -n 1 answer
+    echo  # move to new line
+
+    if [[ "$answer" == [Yy] ]]; then
+        makepkg "$@"
+    else
+        echo "Aborted."
+        return 0
+    fi
+}
+
+# Create alias to use the function
+alias makepkg='confirm_makepkg'
+
+confirm_paru() {
+    # Save user command arguments
+    local args=("$@")
+
+    # Red-colored warning message
+    echo -e "
+\033[1;31mATTENTION!
+
+You are about to prepare a package out of the safe repository. 
+Please read the PKGBUILD file provided by \"paru\" in next step CAREFULLY before proceeding further! 
+Otherwise you may get your operating system infected with malware or make it unstable.
+
+Do you want to continue? (Y/N)\033[0m"
+
+    # Prompt user input
+    read -r -n 1 answer
+    echo  # new line for cleanliness
+
+    if [[ "$answer" == [Yy] ]]; then
+        # Proceed with the actual command using saved arguments
+        command paru "${args[@]}"
+    else
+        echo "Aborted."
+        return 0
+    fi
+}
+
+# Alias paru to our function
+alias paru='confirm_paru'
