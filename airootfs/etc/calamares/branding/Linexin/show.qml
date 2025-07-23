@@ -27,22 +27,18 @@ Presentation
 
     ImageSlide {
         src: "slide01.png"
-        fillMode: Image.PreserveAspectFit
     }
 
     ImageSlide {
         src: "slide02.png"
-        fillMode: Image.PreserveAspectFit
     }
 
     ImageSlide {
         src: "slide03.png"
-        fillMode: Image.PreserveAspectFit
     }
 
     ImageSlide {
         src: "slide04.png"
-        fillMode: Image.PreserveAspectFit
     }
 
     ImageSlide {
@@ -51,12 +47,10 @@ Presentation
 
     ImageSlide {
         src: "slide06.png"
-        fillMode: Image.PreserveAspectFit
     }
 
     ImageSlide {
         src: "slide07.png"
-        fillMode: Image.PreserveAspectFit
     }
 
 }

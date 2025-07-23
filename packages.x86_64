@@ -176,3 +176,6 @@ winetricks
 linexin-updater
 unzip
 affinity-installer
+fuse
+libappimage
+davinci-installer

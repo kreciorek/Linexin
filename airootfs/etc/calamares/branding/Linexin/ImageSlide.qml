@@ -19,5 +19,6 @@ Item {
         id: image
         source: src
         anchors.centerIn: parent
+	fillMode: PreserveAspectCrop
     }
 }

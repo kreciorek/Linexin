@@ -113,7 +113,50 @@ shopt -s histappend
 
 alias fastfetch="fastfetch -l /usr/share/ascii/ascii_fast.txt --logo-color-1 '38;2;198;174;235'"
 
+
+
+
+
+
+
 confirm_makepkg() {
+    # List of makepkg options that shouldn't require a PKGBUILD
+    local SAFE_ONLY_FLAGS=(--help -h --version -V --printsrcinfo)
+
+    # If any safe flag is passed, bypass all checks
+    for arg in "$@"; do
+        for safe in "${SAFE_ONLY_FLAGS[@]}"; do
+            if [[ "$arg" == "$safe" ]]; then
+                command makepkg "$@"
+                return $?
+            fi
+        done
+    done
+
+    # Check for --neverask
+    if [[ -f "$HOME/.makepkg_neverask" ]]; then
+        command makepkg "$@"
+        return $?
+    fi
+
+    # Handle --neverask
+    for arg in "$@"; do
+        if [[ "$arg" == "--neverask" ]]; then
+            touch "$HOME/.makepkg_neverask"
+            set -- "${@/--neverask/}"
+            command makepkg "$@"
+            return $?
+        fi
+    done
+
+    # Check if --noconfirm is passed
+    for arg in "$@"; do
+        if [[ "$arg" == "--noconfirm" ]]; then
+            command makepkg "$@"
+            return $?
+        fi
+    done
+
     local PKGFILE="./PKGBUILD"
 
     if [[ ! -f "$PKGFILE" ]]; then
@@ -138,7 +181,7 @@ Do you want to continue? (Y/N)\033[0m"
     echo  # move to new line
 
     if [[ "$answer" == [Yy] ]]; then
-        makepkg "$@"
+        command makepkg "$@"
     else
         echo "Aborted."
         return 0
@@ -148,42 +191,37 @@ Do you want to continue? (Y/N)\033[0m"
 # Create alias to use the function
 alias makepkg='confirm_makepkg'
 
-confirm_paru() {
-    local PKGFILE="./PKGBUILD"
 
-    if [[ ! -f "$PKGFILE" ]]; then
-        echo "No PKGBUILD found in current directory."
-        return 1
-    fi
 
-    # Show PKGBUILD content
-    cat "$PKGFILE"
 
-    # Red colored warning using ANSI escape codes
-    echo -e "
-\033[1;31mATTENTION!
-   
-You are about to prepare a package out of the safe repository. 
-Please read the PKGBUILD file provided above CAREFULLY before proceeding further! 
-Otherwise you may get your operating system infected with malware or make it unstable.
-Do you want to continue? (Y/N)\033[0m"
 
-    # Prompt for user input
-    read -r -n 1 answer
-    echo  # move to new line
 
-    if [[ "$answer" == [Yy] ]]; then
-        makepkg "$@"
-    else
-        echo "Aborted."
-        return 0
-    fi
-}
-
-# Create alias to use the function
-alias makepkg='confirm_makepkg'
 
 confirm_paru() {
+    # Check for --neverask
+    if [[ -f "$HOME/.makepkg_neverask" ]]; then
+        command makepkg "$@"
+        return $?
+    fi
+
+    # Handle --neverask
+    for arg in "$@"; do
+        if [[ "$arg" == "--neverask" ]]; then
+            touch "$HOME/.makepkg_neverask"
+            set -- "${@/--neverask/}"
+            command makepkg "$@"
+            return $?
+        fi
+    done
+
+    # Check if --noconfirm is passed
+    for arg in "$@"; do
+        if [[ "$arg" == "--noconfirm" ]]; then
+            command makepkg "$@"
+            return $?
+        fi
+    done
+
     # Save user command arguments
     local args=("$@")
 
