@@ -6,15 +6,12 @@
     <title>Linexin - Fast and Elegant OS</title>
     <link rel="icon" type="image/png" href="https://i.ibb.co/n8BPh4sh/logo.png">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -36,77 +33,93 @@
 </head>
 <body class="text-gray-200">
 
-    <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-x-3">
-                <img src="https://i.ibb.co/n8BPh4sh/logo.png" alt="Linexin Logo" class="h-10 w-10">
+                <img src="https://i.ibb.co/n8BPh4sh/logo.png" alt="Linexin Logo" class="h-10 w-10" data-translate-key="logo_alt" data-translate-type="alt">
                 <h1 class="text-2xl font-bold text-white">
                     Linexin<span class="text-purple-400">.</span>
                 </h1>
             </a>
             <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#features" class="hover:text-purple-400 transition-colors">Features</a>
-                <a href="#showcase" class="hover:text-purple-400 transition-colors">Showcase</a>
-                <a href="#community" class="hover:text-purple-400 transition-colors">GitHub</a>
-                <a href="https://drive.google.com/file/d/1pOCnEGYFsVfPRPlTySZdPExakNcWNfgw/view?usp=drive_link" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-105">Download</a>
+                <a href="#features" class="hover:text-purple-400 transition-colors" data-translate-key="nav_features">Features</a>
+                <a href="#showcase" class="hover:text-purple-400 transition-colors" data-translate-key="nav_showcase">Showcase</a>
+                <a href="#community" class="hover:text-purple-400 transition-colors" data-translate-key="nav_github">GitHub</a>
+                <div class="relative">
+                    <button id="lang-button-desktop" class="flex items-center hover:text-purple-400 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.002 6.002 0 0111.336 0H4.332zM2.25 10a8.003 8.003 0 0115.5 0H2.25zm13.418 1.973a6.002 6.002 0 01-11.336 0h11.336z" clip-rule="evenodd" /></svg>
+                        <span id="current-lang-desktop">EN</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                    </button>
+                    <div id="lang-menu-desktop" class="hidden absolute right-0 mt-2 py-2 w-36 glass-effect rounded-lg shadow-xl">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-200 hover:bg-purple-600/50" data-lang="en">English (EN)</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-200 hover:bg-purple-600/50" data-lang="pl">Polski (PL)</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-200 hover:bg-purple-600/50" data-lang="ru">Русский (RU)</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-200 hover:bg-purple-600/50" data-lang="es">Español (ES)</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-200 hover:bg-purple-600/50" data-lang="ua">Українська (UA)</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-200 hover:bg-purple-600/50" data-lang="de">Deutsch (DE)</a>
+                    </div>
+                </div>
+                <a href="https://drive.google.com/file/d/1pOCnEGYFsVfPRPlTySZdPExakNcWNfgw/view?usp=drive_link" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-105" data-translate-key="nav_download">Download</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-             <a href="#features" class="block py-2 hover:text-purple-400 transition-colors">Features</a>
-             <a href="#showcase" class="block py-2 hover:text-purple-400 transition-colors">Showcase</a>
-             <a href="#community" class="block py-2 hover:text-purple-400 transition-colors">GitHub</a>
-             <a href="https://drive.google.com/file/d/1pOCnEGYFsVfPRPlTySZdPExakNcWNfgw/view?usp=drive_link" class="block mt-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-center transition-transform duration-300 hover:scale-105">Download</a>
+             <a href="#features" class="block py-2 hover:text-purple-400 transition-colors" data-translate-key="nav_features">Features</a>
+             <a href="#showcase" class="block py-2 hover:text-purple-400 transition-colors" data-translate-key="nav_showcase">Showcase</a>
+             <a href="#community" class="block py-2 hover:text-purple-400 transition-colors" data-translate-key="nav_github">GitHub</a>
+             <a href="https://drive.google.com/file/d/1pOCnEGYFsVfPRPlTySZdPExakNcWNfgw/view?usp=drive_link" class="block mt-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-center transition-transform duration-300 hover:scale-105" data-translate-key="nav_download">Download</a>
+             <div class="mt-4 pt-4 border-t border-gray-700">
+                <a href="#" class="block py-2 text-gray-300 hover:text-purple-400" data-lang="en">English</a>
+                <a href="#" class="block py-2 text-gray-300 hover:text-purple-400" data-lang="pl">Polski</a>
+                <a href="#" class="block py-2 text-gray-300 hover:text-purple-400" data-lang="ru">Русский</a>
+                <a href="#" class="block py-2 text-gray-300 hover:text-purple-400" data-lang="es">Español</a>
+                <a href="#" class="block py-2 text-gray-300 hover:text-purple-400" data-lang="ua">Українська</a>
+                <a href="#" class="block py-2 text-gray-300 hover:text-purple-400" data-lang="de">Deutsch</a>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="min-h-screen flex items-center justify-center text-center pt-20" style="background-image: linear-gradient(rgba(24, 24, 27, 0.95), rgb(24, 24, 27)), url('https://i.ibb.co/1YhWJYzG/path7.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
             <div class="container mx-auto px-6">
-                <h2 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4">Experience Computing Freedom</h2>
-                <h3 class="text-5xl md:text-7xl font-extrabold gradient-text mb-6">with Linexin OS.</h3>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+                <h2 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4" data-translate-key="hero_title_1">Experience Computing Freedom</h2>
+                <h3 class="text-5xl md:text-7xl font-extrabold gradient-text mb-6" data-translate-key="hero_title_2">with Linexin OS.</h3>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10" data-translate-key="hero_subtitle">
                     A lightweight, creator-focused Linux distribution that combines elegance with powerful performance. Use preconfigured Arch-based (btw) distro that is ready to use and easily install creative tools like Affinity suite or DaVinci Resolve.
                 </p>
                 <div class="flex justify-center space-x-4">
-                    <a href="https://drive.google.com/file/d/1pOCnEGYFsVfPRPlTySZdPExakNcWNfgw/view?usp=drive_link" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105 shadow-lg shadow-purple-500/20">Download Latest</a>
-                    <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105">Learn More</a>
+                    <a href="https://drive.google.com/file/d/1pOCnEGYFsVfPRPlTySZdPExakNcWNfgw/view?usp=drive_link" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105 shadow-lg shadow-purple-500/20" data-translate-key="hero_button_download">Download Latest</a>
+                    <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105" data-translate-key="hero_button_learn">Learn More</a>
                 </div>
             </div>
         </section>
 
-        <!-- Features Section -->
         <section id="features" class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-white">Why Choose Linexin?</h2>
-                    <p class="text-gray-400 mt-2">Everything you need, and nothing you don't.</p>
+                    <h2 class="text-4xl font-bold text-white" data-translate-key="features_title">Why Choose Linexin?</h2>
+                    <p class="text-gray-400 mt-2" data-translate-key="features_subtitle">Everything you need, and nothing you don't.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Feature 1: Blazing Fast -->
                     <div class="p-8 rounded-xl glass-effect text-center transform hover:-translate-y-2 transition-transform duration-300">
                         <div class="bg-red-500/20 text-red-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Blazing Fast</h3>
-                        <p class="text-gray-400">Built on a minimal base, Linexin is optimized for speed and responsiveness, booting up in seconds.</p>
+                        <h3 class="text-2xl font-bold text-white mb-3" data-translate-key="feature_1_title">Blazing Fast</h3>
+                        <p class="text-gray-400" data-translate-key="feature_1_text">Built on a minimal base, Linexin is optimized for speed and responsiveness, booting up in seconds.</p>
                     </div>
-                    <!-- Feature 2: Creative Work -->
                     <div class="p-8 rounded-xl glass-effect text-center transform hover:-translate-y-2 transition-transform duration-300">
                         <div class="bg-blue-500/20 text-blue-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Creative Work</h3>
-                        <p class="text-gray-400">With Affinity Installer and DaVinci Installer built-in, you can easily use creative tools after only a couple of clicks.</p>
+                        <h3 class="text-2xl font-bold text-white mb-3" data-translate-key="feature_2_title">Creative Work</h3>
+                        <p class="text-gray-400" data-translate-key="feature_2_text">With Affinity Installer and DaVinci Installer built-in, you can easily use creative tools after only a couple of clicks.</p>
                     </div>
-                    <!-- Feature 3: Gaming Ready -->
                     <div class="p-8 rounded-xl glass-effect text-center transform hover:-translate-y-2 transition-transform duration-300">
                         <div class="bg-green-500/20 text-green-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -115,31 +128,28 @@
                               <path stroke-linecap="round" stroke-linejoin="round" d="M15 11h.01M18 13h.01" />
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3">Gaming Ready</h3>
-                        <p class="text-gray-400">Comes pre-packaged with Steam, gamescope and gamemode that can boost your gaming performance.</p>
+                        <h3 class="text-2xl font-bold text-white mb-3" data-translate-key="feature_3_title">Gaming Ready</h3>
+                        <p class="text-gray-400" data-translate-key="feature_3_text">Comes pre-packaged with Steam, gamescope and gamemode that can boost your gaming performance.</p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Showcase Section -->
         <section id="showcase" class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-white">Beautifully Crafted Desktop</h2>
-                    <p class="text-gray-400 mt-2">An interface that's both powerful and a pleasure to use.</p>
+                    <h2 class="text-4xl font-bold text-white" data-translate-key="showcase_title">Beautifully Crafted Desktop</h2>
+                    <p class="text-gray-400 mt-2" data-translate-key="showcase_subtitle">An interface that's both powerful and a pleasure to use.</p>
                 </div>
                 <div class="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 p-4 glass-effect">
                     <img id="showcase-image" src="" alt="Linexin OS Screenshot" class="w-full h-auto rounded-lg transition-opacity duration-500"
-                         onerror="this.onerror=null;this.src='https://placehold.co/1200x700/1f2937/e5e7eb?text=Image+Not+Found';">
+                         onerror="this.onerror=null;this.src='https://placehold.co/1200x700/1f2937/e5e7eb?text=Image+Not+Found';" data-translate-key="showcase_image_alt" data-translate-type="alt">
                     
-                    <!-- Previous Button -->
                     <button id="prev-button" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
-                    <!-- Next Button -->
                     <button id="next-button" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -149,15 +159,14 @@
             </div>
         </section>
 
-        <!-- GitHub Section -->
         <section id="community" class="py-20">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-bold text-white">Open-Source Project</h2>
-                <p class="text-gray-400 mt-2 max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold text-white" data-translate-key="community_title">Open-Source Project</h2>
+                <p class="text-gray-400 mt-2 max-w-2xl mx-auto" data-translate-key="community_subtitle">
                     Linexin is built with fully open-sourced code. Everything you see after installation can be forked or modified from its GitHub page.
                 </p>
                 <div class="mt-8">
-                    <a href="https://github.com/Petexy/Linexin" target="_blank" rel="noopener noreferrer" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105 shadow-lg shadow-purple-500/20">
+                    <a href="https://github.com/Petexy/Linexin" target="_blank" rel="noopener noreferrer" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105 shadow-lg shadow-purple-500/20" data-translate-key="community_button">
                         Go to Linexin's GitHub
                     </a>
                 </div>
@@ -165,57 +174,225 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="border-t border-gray-800">
         <div class="container mx-auto px-6 py-8 text-center text-gray-400">
-            <p>&copy; 2025 Linexin Project.</p>
-            <p class="text-sm mt-2">Designed with ❤️ for the open-source community.</p>
+            <p data-translate-key="footer_copy">&copy; 2025 Linexin Project.</p>
+            <p class="text-sm mt-2" data-translate-key="footer_love">Designed with ❤️ for the open-source community.</p>
         </div>
     </footer>
 
     <script>
-        // --- Mobile menu toggle ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        // --- Translations Object ---
+        const translations = {
+            'en': {
+                page_title: "Linexin - Fast and Elegant OS",
+                logo_alt: "Linexin Logo",
+                nav_features: "Features",
+                nav_showcase: "Showcase",
+                nav_github: "GitHub",
+                nav_download: "Download",
+                hero_title_1: "Experience Computing Freedom",
+                hero_title_2: "with Linexin OS.",
+                hero_subtitle: "A lightweight, creator-focused Linux distribution that combines elegance with powerful performance. Use preconfigured Arch-based (btw) distro that is ready to use and easily install creative tools like Affinity suite or DaVinci Resolve.",
+                hero_button_download: "Download Latest",
+                hero_button_learn: "Learn More",
+                features_title: "Why Choose Linexin?",
+                features_subtitle: "Everything you need, and nothing you don't.",
+                feature_1_title: "Blazing Fast",
+                feature_1_text: "Built on a minimal base, Linexin is optimized for speed and responsiveness, booting up in seconds.",
+                feature_2_title: "Creative Work",
+                feature_2_text: "With Affinity Installer and DaVinci Installer built-in, you can easily use creative tools after only a couple of clicks.",
+                feature_3_title: "Gaming Ready",
+                feature_3_text: "Comes pre-packaged with Steam, gamescope and gamemode that can boost your gaming performance.",
+                showcase_title: "Beautifully Crafted Desktop",
+                showcase_subtitle: "An interface that's both powerful and a pleasure to use.",
+                showcase_image_alt: "Linexin OS Screenshot",
+                community_title: "Open-Source Project",
+                community_subtitle: "Linexin is built with fully open-sourced code. Everything you see after installation can be forked or modified from its GitHub page.",
+                community_button: "Go to Linexin's GitHub",
+                footer_copy: "&copy; 2025 Linexin Project.",
+                footer_love: "Designed with ❤️ for the open-source community."
+            },
+            'pl': {
+                page_title: "Linexin - Szybki i Elegancki System Operacyjny",
+                logo_alt: "Logo Linexin",
+                nav_features: "Funkcje",
+                nav_showcase: "Galeria",
+                nav_github: "GitHub",
+                nav_download: "Pobierz",
+                hero_title_1: "Doświadcz Komputerowej Wolności",
+                hero_title_2: "z systemem Linexin OS.",
+                hero_subtitle: "Lekka, skoncentrowana na twórcach dystrybucja Linuksa, która łączy elegancję z potężną wydajnością. Użyj wstępnie skonfigurowanej dystrybucji opartej na Arch (btw), która jest gotowa do użycia i pozwala łatwo instalować narzędzia kreatywne, takie jak pakiet Affinity czy DaVinci Resolve.",
+                hero_button_download: "Pobierz Najnowszą",
+                hero_button_learn: "Dowiedz się więcej",
+                features_title: "Dlaczego Wybrać Linexin?",
+                features_subtitle: "Wszystko, czego potrzebujesz, i nic ponadto.",
+                feature_1_title: "Błyskawicznie Szybki",
+                feature_1_text: "Zbudowany na minimalistycznej podstawie, Linexin jest zoptymalizowany pod kątem szybkości i responsywności, uruchamiając się w kilka sekund.",
+                feature_2_title: "Praca Kreatywna",
+                feature_2_text: "Dzięki wbudowanym instalatorom Affinity i DaVinci, możesz łatwo korzystać z narzędzi kreatywnych po zaledwie kilku kliknięciach.",
+                feature_3_title: "Gotowy do Gier",
+                feature_3_text: "Dostarczany z preinstalowanym Steamem, gamescope i gamemode, które mogą zwiększyć Twoją wydajność w grach.",
+                showcase_title: "Pięknie Zaprojektowany Pulpit",
+                showcase_subtitle: "Interfejs, który jest zarówno potężny, jak i przyjemny w użyciu.",
+                showcase_image_alt: "Zrzut ekranu systemu Linexin OS",
+                community_title: "Projekt Open-Source",
+                community_subtitle: "Linexin jest zbudowany na w pełni otwartym kodzie źródłowym. Wszystko, co widzisz po instalacji, można sforkować lub zmodyfikować na jego stronie GitHub.",
+                community_button: "Przejdź do GitHub Linexin",
+                footer_copy: "&copy; 2025 Projekt Linexin.",
+                footer_love: "Zaprojektowano z ❤️ dla społeczności open-source."
+            },
+            'ru': {
+                page_title: "Linexin - Быстрая и Элегантная ОС",
+                logo_alt: "Логотип Linexin",
+                nav_features: "Возможности",
+                nav_showcase: "Галерея",
+                nav_github: "GitHub",
+                nav_download: "Скачать",
+                hero_title_1: "Испытайте Свободу Вычислений",
+                hero_title_2: "с Linexin OS.",
+                hero_subtitle: "Легкий, ориентированный на создателей дистрибутив Linux, сочетающий элегантность с высокой производительностью. Используйте предварительно настроенный дистрибутив на базе Arch (кстати), готовый к использованию, и легко устанавливайте творческие инструменты, такие как пакет Affinity или DaVinci Resolve.",
+                hero_button_download: "Скачать Последнюю",
+                hero_button_learn: "Узнать больше",
+                features_title: "Почему стоит выбрать Linexin?",
+                features_subtitle: "Все, что вам нужно, и ничего лишнего.",
+                feature_1_title: "Молниеносно Быстрый",
+                feature_1_text: "Построенный на минимальной основе, Linexin оптимизирован для скорости и отзывчивости, загружаясь за секунды.",
+                feature_2_title: "Творческая Работа",
+                feature_2_text: "С встроенными установщиками Affinity и DaVinci вы можете легко использовать творческие инструменты всего за пару кликов.",
+                feature_3_title: "Готов для Игр",
+                feature_3_text: "Поставляется с предустановленными Steam, gamescope и gamemode, которые могут повысить вашу производительность в играх.",
+                showcase_title: "Красиво Созданный Рабочий Стол",
+                showcase_subtitle: "Интерфейс, который одновременно мощный и приятный в использовании.",
+                showcase_image_alt: "Скриншот Linexin OS",
+                community_title: "Проект с Открытым Исходным Кодом",
+                community_subtitle: "Linexin создан на основе полностью открытого исходного кода. Все, что вы видите после установки, можно форкнуть или изменить на его странице в GitHub.",
+                community_button: "Перейти на GitHub Linexin",
+                footer_copy: "&copy; 2025 Проект Linexin.",
+                footer_love: "Разработано с ❤️ для сообщества с открытым исходным кодом."
+            },
+            'es': {
+                page_title: "Linexin - SO Rápido y Elegante",
+                logo_alt: "Logo de Linexin",
+                nav_features: "Características",
+                nav_showcase: "Galería",
+                nav_github: "GitHub",
+                nav_download: "Descargar",
+                hero_title_1: "Experimenta la Libertad Informática",
+                hero_title_2: "con Linexin OS.",
+                hero_subtitle: "Una distribución de Linux ligera y enfocada en creadores que combina elegancia con un rendimiento potente. Utiliza una distribución preconfigurada basada en Arch (por cierto) que está lista para usar e instala fácilmente herramientas creativas como la suite Affinity o DaVinci Resolve.",
+                hero_button_download: "Descargar Última",
+                hero_button_learn: "Saber Más",
+                features_title: "¿Por Qué Elegir Linexin?",
+                features_subtitle: "Todo lo que necesitas, y nada que no.",
+                feature_1_title: "Increíblemente Rápido",
+                feature_1_text: "Construido sobre una base mínima, Linexin está optimizado para la velocidad y la capacidad de respuesta, arrancando en segundos.",
+                feature_2_title: "Trabajo Creativo",
+                feature_2_text: "Con los instaladores de Affinity y DaVinci incorporados, puedes usar fácilmente herramientas creativas con solo un par de clics.",
+                feature_3_title: "Listo para Jugar",
+                feature_3_text: "Viene pre-empaquetado con Steam, gamescope y gamemode que pueden mejorar tu rendimiento en los juegos.",
+                showcase_title: "Escritorio Bellamente Diseñado",
+                showcase_subtitle: "Una interfaz que es a la vez potente y un placer de usar.",
+                showcase_image_alt: "Captura de pantalla de Linexin OS",
+                community_title: "Proyecto de Código Abierto",
+                community_subtitle: "Linexin está construido con código totalmente de código abierto. Todo lo que ves después de la instalación puede ser bifurcado o modificado desde su página de GitHub.",
+                community_button: "Ir al GitHub de Linexin",
+                footer_copy: "&copy; 2025 Proyecto Linexin.",
+                footer_love: "Diseñado con ❤️ para la comunidad de código abierto."
+            },
+            'ua': {
+                page_title: "Linexin - Швидка та Елегантна ОС",
+                logo_alt: "Логотип Linexin",
+                nav_features: "Можливості",
+                nav_showcase: "Галерея",
+                nav_github: "GitHub",
+                nav_download: "Завантажити",
+                hero_title_1: "Відчуйте Свободу Обчислень",
+                hero_title_2: "з Linexin OS.",
+                hero_subtitle: "Легкий, орієнтований на творців дистрибутив Linux, що поєднує елегантність з потужною продуктивністю. Використовуйте попередньо налаштований дистрибутив на базі Arch (до речі), готовий до використання, та легко встановлюйте творчі інструменти, як-от пакет Affinity або DaVinci Resolve.",
+                hero_button_download: "Завантажити Останню",
+                hero_button_learn: "Дізнатися більше",
+                features_title: "Чому варто обрати Linexin?",
+                features_subtitle: "Все, що вам потрібно, і нічого зайвого.",
+                feature_1_title: "Блискавично Швидкий",
+                feature_1_text: "Створений на мінімальній основі, Linexin оптимізований для швидкості та чутливості, завантажуючись за лічені секунди.",
+                feature_2_title: "Творча Робота",
+                feature_2_text: "З вбудованими інсталяторами Affinity та DaVinci ви можете легко використовувати творчі інструменти лише за кілька кліків.",
+                feature_3_title: "Готовий для Ігор",
+                feature_3_text: "Поставляється з попередньо встановленими Steam, gamescope та gamemode, що можуть підвищити вашу продуктивність в іграх.",
+                showcase_title: "Прекрасно Створений Робочий Стіл",
+                showcase_subtitle: "Інтерфейс, який є одночасно потужним і приємним у використанні.",
+                showcase_image_alt: "Знімок екрана Linexin OS",
+                community_title: "Проєкт з Відкритим Кодом",
+                community_subtitle: "Linexin побудований на повністю відкритому вихідному коді. Все, що ви бачите після встановлення, можна форкнути або змінити на його сторінці GitHub.",
+                community_button: "Перейти на GitHub Linexin",
+                footer_copy: "&copy; 2025 Проєкт Linexin.",
+                footer_love: "Розроблено з ❤️ для спільноти з відкритим кодом."
+            },
+            'de': {
+                page_title: "Linexin - Schnelles und Elegantes OS",
+                logo_alt: "Linexin Logo",
+                nav_features: "Funktionen",
+                nav_showcase: "Galerie",
+                nav_github: "GitHub",
+                nav_download: "Herunterladen",
+                hero_title_1: "Erleben Sie Computer-Freiheit",
+                hero_title_2: "mit Linexin OS.",
+                hero_subtitle: "Eine leichtgewichtige, auf Kreative ausgerichtete Linux-Distribution, die Eleganz mit leistungsstarker Performance verbindet. Verwenden Sie eine vorkonfigurierte, auf Arch basierende Distribution (übrigens), die sofort einsatzbereit ist und die einfache Installation von Kreativwerkzeugen wie der Affinity-Suite oder DaVinci Resolve ermöglicht.",
+                hero_button_download: "Neueste Herunterladen",
+                hero_button_learn: "Mehr Erfahren",
+                features_title: "Warum Linexin Wählen?",
+                features_subtitle: "Alles, was Sie brauchen, und nichts, was Sie nicht brauchen.",
+                feature_1_title: "Blitzschnell",
+                feature_1_text: "Auf einer minimalen Basis aufgebaut, ist Linexin für Geschwindigkeit und Reaktionsfähigkeit optimiert und startet in Sekunden.",
+                feature_2_title: "Kreatives Arbeiten",
+                feature_2_text: "Mit integrierten Installern für Affinity und DaVinci können Sie kreative Werkzeuge nach nur wenigen Klicks einfach verwenden.",
+                feature_3_title: "Gaming-Bereit",
+                feature_3_text: "Wird mit vorinstalliertem Steam, Gamescope und Gamemode geliefert, die Ihre Gaming-Leistung steigern können.",
+                showcase_title: "Wunderschön Gestalteter Desktop",
+                showcase_subtitle: "Eine Benutzeroberfläche, die sowohl leistungsstark als auch angenehm zu bedienen ist.",
+                showcase_image_alt: "Screenshot von Linexin OS",
+                community_title: "Open-Source-Projekt",
+                community_subtitle: "Linexin ist mit vollständig quelloffenem Code erstellt. Alles, was Sie nach der Installation sehen, kann von seiner GitHub-Seite geforkt oder modifiziert werden.",
+                community_button: "Zu Linexins GitHub gehen",
+                footer_copy: "&copy; 2025 Linexin Projekt.",
+                footer_love: "Mit ❤️ für die Open-Source-Community entworfen."
+            }
+        };
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // --- Showcase Gallery ---
         document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile menu toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Showcase Gallery ---
             const showcaseImage = document.getElementById('showcase-image');
             const prevButton = document.getElementById('prev-button');
             const nextButton = document.getElementById('next-button');
 
-            // Add your image URLs here
             const images = [
                 'https://i.ibb.co/GfwZ1x9S/Screenshot-From-2025-07-27-19-46-24.png',
                 'https://i.ibb.co/Qj6prcQr/Screenshot-From-2025-07-27-20-00-53.png',
                 'https://i.ibb.co/6cynj74Y/Screenshot-From-2025-07-27-20-06-24.png',
                 'https://i.ibb.co/6Rb8NhhQ/Screenshot-From-2025-07-27-20-16-48.png'
             ];
-
             let currentIndex = 0;
 
             function updateImage() {
-                if(showcaseImage) {
+                if (showcaseImage) {
                     showcaseImage.style.opacity = '0';
                     setTimeout(() => {
                         showcaseImage.src = images[currentIndex];
                         showcaseImage.style.opacity = '1';
-                    }, 300); // Match timeout with transition duration
+                    }, 300);
                 }
             }
 
-            if(prevButton && nextButton) {
+            if (prevButton && nextButton) {
                 prevButton.addEventListener('click', () => {
                     currentIndex = (currentIndex - 1 + images.length) % images.length;
                     updateImage();
@@ -226,11 +403,85 @@
                     updateImage();
                 });
             }
+            if (showcaseImage) {
+               updateImage();
+            }
+            
 
-            // Initialize first image
-            updateImage();
+            // --- Language Switcher ---
+            const langButtonDesktop = document.getElementById('lang-button-desktop');
+            const langMenuDesktop = document.getElementById('lang-menu-desktop');
+            const allLangLinks = document.querySelectorAll('a[data-lang]');
+
+            const setLanguage = (lang) => {
+                if (!translations[lang]) return;
+
+                // Update text and attributes
+                document.querySelectorAll('[data-translate-key]').forEach(el => {
+                    const key = el.getAttribute('data-translate-key');
+                    const type = el.getAttribute('data-translate-type');
+                    const translation = translations[lang][key];
+
+                    if (translation) {
+                        if (type === 'alt') {
+                            el.alt = translation;
+                        } else if (key === 'footer_copy' || key === 'footer_love') {
+                            el.innerHTML = translation;
+                        } else {
+                            el.innerText = translation;
+                        }
+                    }
+                });
+
+                document.title = translations[lang].page_title;
+
+                // Update language switcher display
+                document.getElementById('current-lang-desktop').innerText = lang.toUpperCase();
+                
+                // Store preference
+                localStorage.setItem('language', lang);
+
+                // Close menus
+                mobileMenu.classList.add('hidden');
+                langMenuDesktop.classList.add('hidden');
+            };
+
+            // Desktop dropdown toggle
+            if(langButtonDesktop){
+                langButtonDesktop.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    langMenuDesktop.classList.toggle('hidden');
+                });
+            }
+
+            // Set language on link click
+            allLangLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = link.getAttribute('data-lang');
+                    setLanguage(lang);
+                });
+            });
+
+            // Hide desktop dropdown when clicking outside
+            document.addEventListener('click', () => {
+                if(langMenuDesktop && !langMenuDesktop.classList.contains('hidden')){
+                   langMenuDesktop.classList.add('hidden');
+                }
+            });
+
+            // Initial load: Set language from storage or default
+            const savedLang = localStorage.getItem('language');
+            const browserLang = navigator.language.split('-')[0];
+            // Set language based on this priority: 1. Saved, 2. Browser (if supported), 3. English
+            if(savedLang && translations[savedLang]) {
+                setLanguage(savedLang);
+            } else if (translations[browserLang]) {
+                setLanguage(browserLang);
+            } else {
+                setLanguage('en');
+            }
         });
     </script>
-
 </body>
 </html>
