@@ -180,3 +180,6 @@ affinity-installer
 fuse
 libappimage
 davinci-installer
+ffmpeg
+gstreamer
+python-distro
