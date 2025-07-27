@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linexin - Fast and Elegant OS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #18181b; /* A neutral dark gray */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #c084fc, #a78bfa); /* Purple gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-x-3">
+                <img src="https://i.ibb.co/n8BPh4sh/logo.png" alt="Linexin Logo" class="h-10 w-10">
+                <h1 class="text-2xl font-bold text-white">
+                    Linexin<span class="text-purple-400">.</span>
+                </h1>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#features" class="hover:text-purple-400 transition-colors">Features</a>
+                <a href="#showcase" class="hover:text-purple-400 transition-colors">Showcase</a>
+                <a href="#community" class="hover:text-purple-400 transition-colors">GitHub</a>
+                <a href="https://drive.google.com/file/d/12Wr6rskA_I38LCiFb2EoaKv4YrfI5HUW/view?usp=drive_link" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-transform duration-300 hover:scale-105">Download</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="#features" class="block py-2 hover:text-purple-400 transition-colors">Features</a>
+             <a href="#showcase" class="block py-2 hover:text-purple-400 transition-colors">Showcase</a>
+             <a href="#community" class="block py-2 hover:text-purple-400 transition-colors">GitHub</a>
+             <a href="#" class="block mt-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-center transition-transform duration-300 hover:scale-105">Download</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center text-center bg-cover bg-center pt-20" style="background-image: linear-gradient(rgba(24, 24, 27, 0.95), rgb(24, 24, 27)), url('https://placehold.co/1920x1080/18181b/a855f7?text=Linexin');">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4">Experience Computing Freedom</h2>
+                <h3 class="text-5xl md:text-7xl font-extrabold gradient-text mb-6">with Linexin OS.</h3>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+                    A lightweight, creator-focused Linux distribution that combines elegance with powerful performance. Use Arch (btw) and easily install creative tools like Affinity suite or DaVinci Resolve.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://drive.google.com/uc?export=download&id=12Wr6rskA_I38LCiFb2EoaKv4YrfI5HUW" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105 shadow-lg shadow-purple-500/20">Download Latest</a>
+                    <a href="#features" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">Why Choose Linexin?</h2>
+                    <p class="text-gray-400 mt-2">Everything you need, and nothing you don't.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1: Blazing Fast -->
+                    <div class="p-8 rounded-xl glass-effect text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="bg-red-500/20 text-red-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Blazing Fast</h3>
+                        <p class="text-gray-400">Built on a minimal base, Linexin is optimized for speed and responsiveness, booting up in seconds.</p>
+                    </div>
+                    <!-- Feature 2: Creative Work -->
+                    <div class="p-8 rounded-xl glass-effect text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="bg-blue-500/20 text-blue-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Creative Work</h3>
+                        <p class="text-gray-400">With Affinity Installer and DaVinci Installer built-in, you can easily use creative tools after only a couple of clicks.</p>
+                    </div>
+                    <!-- Feature 3: Gaming Ready -->
+                    <div class="p-8 rounded-xl glass-effect text-center transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="bg-green-500/20 text-green-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M2 10a4 4 0 014-4h12a4 4 0 014 4v4a4 4 0 01-4 4H6a4 4 0 01-4-4v-4z" />
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M8 10v4m-2-2h4" />
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11h.01M18 13h.01" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Gaming Ready</h3>
+                        <p class="text-gray-400">Comes pre-packaged with Steam, gamescope and gamemode that can boost your gaming performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Showcase Section -->
+        <section id="showcase" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">Beautifully Crafted Desktop</h2>
+                    <p class="text-gray-400 mt-2">An interface that's both powerful and a pleasure to use.</p>
+                </div>
+                <div class="relative rounded-xl overflow-hidden shadow-2xl shadow-black/50 p-4 glass-effect">
+                    <img id="showcase-image" src="" alt="Linexin OS Screenshot" class="w-full h-auto rounded-lg transition-opacity duration-500"
+                         onerror="this.onerror=null;this.src='https://placehold.co/1200x700/1f2937/e5e7eb?text=Image+Not+Found';">
+                    
+                    <!-- Previous Button -->
+                    <button id="prev-button" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <!-- Next Button -->
+                    <button id="next-button" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Section -->
+        <section id="community" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-white">Open-Source Project</h2>
+                <p class="text-gray-400 mt-2 max-w-2xl mx-auto">
+                    Linexin is built with fully open-source code. Everything you see after installation can be forked or modified from its GitHub page.
+                </p>
+                <div class="mt-8">
+                    <a href="https://github.com/Petexy/Linexin" target="_blank" rel="noopener noreferrer" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105 shadow-lg shadow-purple-500/20">
+                        Go to Linexin's GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025 Linexin Project.</p>
+            <p class="text-sm mt-2">Designed with ❤️ for the open-source community.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile menu toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- Showcase Gallery ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const showcaseImage = document.getElementById('showcase-image');
+            const prevButton = document.getElementById('prev-button');
+            const nextButton = document.getElementById('next-button');
+
+            // Add your image URLs here
+            const images = [
+                'https://placehold.co/1200x700/1f2937/e5e7eb?text=Desktop+View',
+                'https://placehold.co/1200x700/1f2937/c4b5fd?text=Affinity+App',
+                'https://placehold.co/1200x700/1f2937/a78bfa?text=Davinci+App',
+                'https://placehold.co/1200x700/1f2937/8b5cf6?text=Personalize'
+            ];
+
+            let currentIndex = 0;
+
+            function updateImage() {
+                if(showcaseImage) {
+                    showcaseImage.style.opacity = '0';
+                    setTimeout(() => {
+                        showcaseImage.src = images[currentIndex];
+                        showcaseImage.style.opacity = '1';
+                    }, 300); // Match timeout with transition duration
+                }
+            }
+
+            if(prevButton && nextButton) {
+                prevButton.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    updateImage();
+                });
+
+                nextButton.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateImage();
+                });
+            }
+
+            // Initialize first image
+            updateImage();
+        });
+    </script>
+
+</body>
+</html>
