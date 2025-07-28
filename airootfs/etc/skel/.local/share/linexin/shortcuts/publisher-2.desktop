@@ -2,7 +2,7 @@
 Name=Publisher 2
 GenericName=Publisher on Wine
 Comment=
-Exec=rum wine-affinity $HOME/.WineAffinity wine $HOME'/.WineAffinity/drive_c/Program Files/Affinity/Publisher 2/Publisher.exe'
+Exec=/usr/bin/publisher
 # Change the rum [version] and the [USER] paths to the right directory
 
 Icon=/usr/share/icons/publisher.png

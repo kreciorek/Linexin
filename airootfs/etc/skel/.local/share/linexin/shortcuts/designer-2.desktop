@@ -2,7 +2,7 @@
 Name=Designer 2
 GenericName=Designer on Wine
 Comment=
-Exec=rum wine-affinity $HOME/.WineAffinity wine $HOME'/.WineAffinity/drive_c/Program Files/Affinity/Designer 2/Designer.exe'
+Exec=/usr/bin/designer
 # Change the rum [version] and the [USER] paths to the right directory
 
 Icon=/usr/share/icons/designer.png
