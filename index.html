@@ -44,6 +44,7 @@
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="#features" class="hover:text-purple-400 transition-colors" data-translate-key="nav_features">Features</a>
                 <a href="#showcase" class="hover:text-purple-400 transition-colors" data-translate-key="nav_showcase">Showcase</a>
+                <a href="#faq" class="hover:text-purple-400 transition-colors" data-translate-key="nav_faq">FAQ</a>
                 <a href="#community" class="hover:text-purple-400 transition-colors" data-translate-key="nav_github">GitHub</a>
                 <div class="relative">
                     <button id="lang-button-desktop" class="flex items-center hover:text-purple-400 transition-colors">
@@ -69,6 +70,7 @@
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
              <a href="#features" class="block py-2 hover:text-purple-400 transition-colors" data-translate-key="nav_features">Features</a>
              <a href="#showcase" class="block py-2 hover:text-purple-400 transition-colors" data-translate-key="nav_showcase">Showcase</a>
+             <a href="#faq" class="block py-2 hover:text-purple-400 transition-colors" data-translate-key="nav_faq">FAQ</a>
              <a href="#community" class="block py-2 hover:text-purple-400 transition-colors" data-translate-key="nav_github">GitHub</a>
              <a href="https://drive.google.com/file/d/1pOCnEGYFsVfPRPlTySZdPExakNcWNfgw/view?usp=drive_link" class="block mt-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-center transition-transform duration-300 hover:scale-105" data-translate-key="nav_download">Download</a>
              <div class="mt-4 pt-4 border-t border-gray-700">
@@ -146,15 +148,76 @@
                          onerror="this.onerror=null;this.src='https://placehold.co/1200x700/1f2937/e5e7eb?text=Image+Not+Found';" data-translate-key="showcase_image_alt" data-translate-type="alt">
                     
                     <button id="prev-button" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
                     </button>
                     <button id="next-button" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
                     </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white" data-translate-key="faq_title">Frequently Asked Questions</h2>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4" id="faq-accordion">
+                    <div class="glass-effect rounded-lg overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 hover:bg-white/5 transition-colors duration-300">
+                            <span class="text-xl font-semibold text-white" data-translate-key="faq_q1">What is Linexin OS?</span>
+                            <svg class="faq-arrow w-6 h-6 text-purple-400 transition-transform transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden">
+                           <div class="p-6 pt-0">
+                                <p class="text-gray-300" data-translate-key="faq_a1">Linexin is a Linux distribution based on Arch Linux. It is designed to be a fast and user-friendly operating system, pre-configured for creative professionals and gamers.</p>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="glass-effect rounded-lg overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 hover:bg-white/5 transition-colors duration-300">
+                            <span class="text-xl font-semibold text-white" data-translate-key="faq_q2">Who is Linexin for?</span>
+                            <svg class="faq-arrow w-6 h-6 text-purple-400 transition-transform transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-300" data-translate-key="faq_a2">Linexin is ideal for content creators who need easy access to tools like the Affinity suite and DaVinci Resolve, gamers looking for an optimized experience with Steam and Gamemode, and anyone who wants a beautiful and performant Arch-based system without the complex setup.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="glass-effect rounded-lg overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 hover:bg-white/5 transition-colors duration-300">
+                            <span class="text-xl font-semibold text-white" data-translate-key="faq_q3">Is Linexin free to use?</span>
+                            <svg class="faq-arrow w-6 h-6 text-purple-400 transition-transform transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-300" data-translate-key="faq_a3">Yes, absolutely. Linexin is a free and open-source project. You can download, use, modify, and distribute it freely. The project is supported by its community.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-effect rounded-lg overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 hover:bg-white/5 transition-colors duration-300">
+                            <span class="text-xl font-semibold text-white" data-translate-key="faq_q4">What desktop environment does Linexin use?</span>
+                            <svg class="faq-arrow w-6 h-6 text-purple-400 transition-transform transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-300" data-translate-key="faq_a4">Linexin uses a carefully customized version of the GNOME desktop environment. All extensions included in the distro can be easily disabled for a clean, vanilla GNOME experience. The Extension Manager is also included to help you find any extensions you might be missing. The interface has been streamlined to be clean, intuitive, and efficient, providing a great Arch-based user experience out of the box.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="glass-effect rounded-lg overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6 hover:bg-white/5 transition-colors duration-300">
+                            <span class="text-xl font-semibold text-white" data-translate-key="faq_q5">Is Linexin an immutable distro?</span>
+                            <svg class="faq-arrow w-6 h-6 text-purple-400 transition-transform transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden">
+                            <div class="p-6 pt-0">
+                                <p class="text-gray-300" data-translate-key="faq_a5">No, Linexin is not an immutable distro. However, it ships with a minimal number of system packages and no graphical package manager. Because of this, the average user is advised to use Flatpaks, while power users can still freely use pacman and the AUR.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -189,6 +252,7 @@
                 logo_alt: "Linexin Logo",
                 nav_features: "Features",
                 nav_showcase: "Showcase",
+                nav_faq: "FAQ",
                 nav_github: "GitHub",
                 nav_download: "Download",
                 hero_title_1: "Experience Computing Freedom",
@@ -207,6 +271,17 @@
                 showcase_title: "Beautifully Crafted Desktop",
                 showcase_subtitle: "An interface that's both powerful and a pleasure to use.",
                 showcase_image_alt: "Linexin OS Screenshot",
+                faq_title: "Frequently Asked Questions",
+                faq_q1: "What is Linexin OS?",
+                faq_a1: "Linexin is a Linux distribution based on Arch Linux. It is designed to be a fast and user-friendly operating system, pre-configured for creative professionals and gamers.",
+                faq_q2: "Who is Linexin for?",
+                faq_a2: "Linexin is ideal for content creators who need easy access to tools like the Affinity suite and DaVinci Resolve, gamers looking for an optimized experience with Steam and Gamemode, and anyone who wants a beautiful and performant Arch-based system without the complex setup.",
+                faq_q3: "Is Linexin free to use?",
+                faq_a3: "Yes, absolutely. Linexin is a free and open-source project. You can download, use, modify, and distribute it freely. The project is supported by its community.",
+                faq_q4: "What desktop environment does Linexin use?",
+                faq_a4: "Linexin uses a carefully customized version of the GNOME desktop environment. All extensions included in the distro can be easily disabled for a clean, vanilla GNOME experience. The Extension Manager is also included to help you find any extensions you might be missing. The interface has been streamlined to be clean, intuitive, and efficient, providing a great Arch-based user experience out of the box.",
+                faq_q5: "Is Linexin an immutable distro?",
+                faq_a5: "No, Linexin is not an immutable distro. However, it ships with a minimal number of system packages and no graphical package manager. Because of this, the average user is advised to use Flatpaks, while power users can still freely use pacman and the AUR.",
                 community_title: "Open-Source Project",
                 community_subtitle: "Linexin is built with fully open-sourced code. Everything you see after installation can be forked or modified from its GitHub page.",
                 community_button: "Go to Linexin's GitHub",
@@ -218,6 +293,7 @@
                 logo_alt: "Logo Linexin",
                 nav_features: "Funkcje",
                 nav_showcase: "Galeria",
+                nav_faq: "FAQ",
                 nav_github: "GitHub",
                 nav_download: "Pobierz",
                 hero_title_1: "Doświadcz Komputerowej Wolności",
@@ -236,6 +312,17 @@
                 showcase_title: "Pięknie Zaprojektowany Pulpit",
                 showcase_subtitle: "Interfejs, który jest zarówno potężny, jak i przyjemny w użyciu.",
                 showcase_image_alt: "Zrzut ekranu systemu Linexin OS",
+                faq_title: "Często Zadawane Pytania",
+                faq_q1: "Czym jest Linexin OS?",
+                faq_a1: "Linexin to dystrybucja Linuksa oparta na Arch Linux. Została zaprojektowana jako szybki i przyjazny dla użytkownika system operacyjny, wstępnie skonfigurowany dla kreatywnych profesjonalistów i graczy.",
+                faq_q2: "Dla kogo jest Linexin?",
+                faq_a2: "Linexin jest idealny dla twórców treści, którzy potrzebują łatwego dostępu do narzędzi takich jak pakiet Affinity i DaVinci Resolve, graczy szukających zoptymalizowanych wrażeń ze Steam i Gamemode oraz każdego, kto chce pięknego i wydajnego systemu opartego na Archu bez skomplikowanej konfiguracji.",
+                faq_q3: "Czy Linexin jest darmowy?",
+                faq_a3: "Tak, absolutnie. Linexin jest darmowym projektem o otwartym kodzie źródłowym. Możesz go swobodnie pobierać, używać, modyfikować i dystrybuować. Projekt jest wspierany przez swoją społeczność.",
+                faq_q4: "Jakiego środowiska graficznego używa Linexin?",
+                faq_a4: "Linexin używa starannie dostosowanej wersji środowiska graficznego GNOME. Wszystkie rozszerzenia zawarte w dystrybucji można łatwo wyłączyć, aby uzyskać czyste, standardowe doświadczenie GNOME. Dołączony jest również menedżer rozszerzeń, który pomoże Ci znaleźć brakujące rozszerzenia. Interfejs został uproszczony, aby był przejrzysty, intuicyjny i wydajny, zapewniając doskonałe wrażenia z użytkowania systemu opartego na Archu od samego początku.",
+                faq_q5: "Czy Linexin jest dystrybucją niemodyfikowalną (immutable)?",
+                faq_a5: "Nie, Linexin nie jest dystrybucją niemodyfikowalną. Jednakże, dostarczany jest z minimalną liczbą pakietów systemowych i bez graficznego menedżera pakietów. Z tego powodu przeciętnemu użytkownikowi zaleca się korzystanie z Flatpaków, podczas gdy zaawansowani użytkownicy wciąż mogą swobodnie używać pacmana i AUR.",
                 community_title: "Projekt Open-Source",
                 community_subtitle: "Linexin jest zbudowany na w pełni otwartym kodzie źródłowym. Wszystko, co widzisz po instalacji, można sforkować lub zmodyfikować na jego stronie GitHub.",
                 community_button: "Przejdź do GitHub Linexin",
@@ -247,6 +334,7 @@
                 logo_alt: "Логотип Linexin",
                 nav_features: "Возможности",
                 nav_showcase: "Галерея",
+                nav_faq: "FAQ",
                 nav_github: "GitHub",
                 nav_download: "Скачать",
                 hero_title_1: "Испытайте Свободу Вычислений",
@@ -265,6 +353,17 @@
                 showcase_title: "Красиво Созданный Рабочий Стол",
                 showcase_subtitle: "Интерфейс, который одновременно мощный и приятный в использовании.",
                 showcase_image_alt: "Скриншот Linexin OS",
+                faq_title: "Часто Задаваемые Вопросы",
+                faq_q1: "Что такое Linexin OS?",
+                faq_a1: "Linexin — это дистрибутив Linux, основанный на Arch Linux. Он разработан как быстрая и удобная операционная система, предварительно настроенная для творческих профессионалов и геймеров.",
+                faq_q2: "Для кого предназначен Linexin?",
+                faq_a2: "Linexin идеально подходит для создателей контента, которым нужен легкий доступ к инструментам, таким как пакет Affinity и DaVinci Resolve, для геймеров, ищущих оптимизированный игровой опыт со Steam и Gamemode, и для всех, кто хочет красивую и производительную систему на базе Arch без сложной настройки.",
+                faq_q3: "Является ли Linexin бесплатным?",
+                faq_a3: "Да, абсолютно. Linexin — это бесплатный проект с открытым исходным кодом. Вы можете свободно скачивать, использовать, изменять и распространять его. Проект поддерживается своим сообществом.",
+                faq_q4: "Какую среду рабочего стола использует Linexin?",
+                faq_a4: "Linexin использует тщательно настроенную версию среды рабочего стола GNOME. Все расширения, включенные в дистрибутив, можно легко отключить, чтобы получить чистый, ванильный опыт GNOME. Также включен менеджер расширений, чтобы помочь вам найти недостающие расширения. Интерфейс был оптимизирован, чтобы быть чистым, интуитивно понятным и эффективным, обеспечивая отличный пользовательский опыт на базе Arch 'из коробки'.",
+                faq_q5: "Является ли Linexin неизменяемым (immutable) дистрибутивом?",
+                faq_a5: "Нет, Linexin не является неизменяемым дистрибутивом. Однако он поставляется с минимальным количеством системных пакетов и без графического менеджера пакетов. Из-за этого обычному пользователю рекомендуется использовать Flatpak, в то время как опытные пользователи по-прежнему могут свободно использовать pacman и AUR.",
                 community_title: "Проект с Открытым Исходным Кодом",
                 community_subtitle: "Linexin создан на основе полностью открытого исходного кода. Все, что вы видите после установки, можно форкнуть или изменить на его странице в GitHub.",
                 community_button: "Перейти на GitHub Linexin",
@@ -276,6 +375,7 @@
                 logo_alt: "Logo de Linexin",
                 nav_features: "Características",
                 nav_showcase: "Galería",
+                nav_faq: "FAQ",
                 nav_github: "GitHub",
                 nav_download: "Descargar",
                 hero_title_1: "Experimenta la Libertad Informática",
@@ -294,6 +394,17 @@
                 showcase_title: "Escritorio Bellamente Diseñado",
                 showcase_subtitle: "Una interfaz que es a la vez potente y un placer de usar.",
                 showcase_image_alt: "Captura de pantalla de Linexin OS",
+                faq_title: "Preguntas Frecuentes",
+                faq_q1: "¿Qué es Linexin OS?",
+                faq_a1: "Linexin es una distribución de Linux basada en Arch Linux. Está diseñada para ser un sistema operativo rápido y fácil de usar, preconfigurado para profesionales creativos y jugadores.",
+                faq_q2: "¿Para quién es Linexin?",
+                faq_a2: "Linexin es ideal para creadores de contenido que necesitan un fácil acceso a herramientas como la suite Affinity y DaVinci Resolve, jugadores que buscan una experiencia optimizada con Steam y Gamemode, y cualquiera que desee un sistema basado en Arch hermoso y de alto rendimiento sin la compleja configuración.",
+                faq_q3: "¿Es Linexin de uso gratuito?",
+                faq_a3: "Sí, absolutamente. Linexin es un proyecto gratuito y de código abierto. Puedes descargarlo, usarlo, modificarlo y distribuirlo libremente. El proyecto es apoyado por su comunidad.",
+                faq_q4: "¿Qué entorno de escritorio utiliza Linexin?",
+                faq_a4: "Linexin utiliza una versión cuidadosamente personalizada del entorno de escritorio GNOME. Todas las extensiones incluidas en la distro se pueden desactivar fácilmente para obtener una experiencia GNOME limpia y pura (vanilla). También se incluye el Gestor de Extensiones para ayudarte a encontrar las extensiones que te falten. La interfaz ha sido optimizada para ser limpia, intuitiva y eficiente, proporcionando una gran experiencia de usuario basada en Arch desde el primer momento.",
+                faq_q5: "¿Es Linexin una distro inmutable?",
+                faq_a5: "No, Linexin no es una distro inmutable. Sin embargo, se entrega con un número mínimo de paquetes de sistema y sin gestor de paquetes gráfico. Debido a esto, se aconseja al usuario medio que utilice Flatpaks, mientras que los usuarios avanzados pueden seguir utilizando libremente pacman y el AUR.",
                 community_title: "Proyecto de Código Abierto",
                 community_subtitle: "Linexin está construido con código totalmente de código abierto. Todo lo que ves después de la instalación puede ser bifurcado o modificado desde su página de GitHub.",
                 community_button: "Ir al GitHub de Linexin",
@@ -305,6 +416,7 @@
                 logo_alt: "Логотип Linexin",
                 nav_features: "Можливості",
                 nav_showcase: "Галерея",
+                nav_faq: "FAQ",
                 nav_github: "GitHub",
                 nav_download: "Завантажити",
                 hero_title_1: "Відчуйте Свободу Обчислень",
@@ -323,6 +435,17 @@
                 showcase_title: "Прекрасно Створений Робочий Стіл",
                 showcase_subtitle: "Інтерфейс, який є одночасно потужним і приємним у використанні.",
                 showcase_image_alt: "Знімок екрана Linexin OS",
+                faq_title: "Часті Запитання",
+                faq_q1: "Що таке Linexin OS?",
+                faq_a1: "Linexin — це дистрибутив Linux, заснований на Arch Linux. Він розроблений як швидка та зручна операційна система, попередньо налаштована для творчих професіоналів та геймерів.",
+                faq_q2: "Для кого призначений Linexin?",
+                faq_a2: "Linexin ідеально підходить для творців контенту, яким потрібен легкий доступ до інструментів, таких як пакет Affinity та DaVinci Resolve, для геймерів, що шукають оптимізований ігровий досвід зі Steam та Gamemode, та для всіх, хто хоче красиву й продуктивну систему на базі Arch без складної настройки.",
+                faq_q3: "Чи є Linexin безкоштовним?",
+                faq_a3: "Так, абсолютно. Linexin — це безкоштовний проєкт з відкритим вихідним кодом. Ви можете вільно завантажувати, використовувати, змінювати та поширювати його. Проєкт підтримується своєю спільнотою.",
+                faq_q4: "Яке середовище робочого столу використовує Linexin?",
+                faq_a4: "Linexin використовує ретельно налаштовану версію середовища робочого столу GNOME. Усі розширення, що входять до дистрибутиву, можна легко вимкнути, щоб отримати чистий, ванільний досвід GNOME. Також включено менеджер розширень, щоб допомогти вам знайти будь-які відсутні розширення. Інтерфейс було оптимізовано, щоб він був чистим, інтуїтивно зрозумілим та ефективним, забезпечуючи чудовий досвід користування системою на базі Arch 'з коробки'.",
+                faq_q5: "Чи є Linexin незмінним (immutable) дистрибутивом?",
+                faq_a5: "Ні, Linexin не є незмінним дистрибутивом. Проте, він поставляється з мінімальною кількістю системних пакетів і без графічного менеджера пакетів. Через це середньостатистичному користувачеві рекомендується використовувати Flatpak, тоді як досвідчені користувачі все ще можуть вільно використовувати pacman та AUR.",
                 community_title: "Проєкт з Відкритим Кодом",
                 community_subtitle: "Linexin побудований на повністю відкритому вихідному коді. Все, що ви бачите після встановлення, можна форкнути або змінити на його сторінці GitHub.",
                 community_button: "Перейти на GitHub Linexin",
@@ -334,6 +457,7 @@
                 logo_alt: "Linexin Logo",
                 nav_features: "Funktionen",
                 nav_showcase: "Galerie",
+                nav_faq: "FAQ",
                 nav_github: "GitHub",
                 nav_download: "Herunterladen",
                 hero_title_1: "Erleben Sie Computer-Freiheit",
@@ -352,6 +476,17 @@
                 showcase_title: "Wunderschön Gestalteter Desktop",
                 showcase_subtitle: "Eine Benutzeroberfläche, die sowohl leistungsstark als auch angenehm zu bedienen ist.",
                 showcase_image_alt: "Screenshot von Linexin OS",
+                faq_title: "Häufig Gestellte Fragen",
+                faq_q1: "Was ist Linexin OS?",
+                faq_a1: "Linexin ist eine Linux-Distribution, die auf Arch Linux basiert. Es ist als schnelles und benutzerfreundliches Betriebssystem konzipiert, das für Kreativprofis und Gamer vorkonfiguriert ist.",
+                faq_q2: "Für wen ist Linexin geeignet?",
+                faq_a2: "Linexin ist ideal für Content-Ersteller, die einfachen Zugriff auf Werkzeuge wie die Affinity-Suite und DaVinci Resolve benötigen, für Gamer, die ein optimiertes Erlebnis mit Steam und Gamemode suchen, und für jeden, der ein schönes und leistungsstarkes Arch-basiertes System ohne komplexe Einrichtung wünscht.",
+                faq_q3: "Ist Linexin kostenlos?",
+                faq_a3: "Ja, absolut. Linexin ist ein kostenloses Open-Source-Projekt. Sie können es frei herunterladen, verwenden, ändern und verbreiten. Das Projekt wird von seiner Community unterstützt.",
+                faq_q4: "Welche Desktop-Umgebung verwendet Linexin?",
+                faq_a4: "Linexin verwendet eine sorgfältig angepasste Version der GNOME-Desktop-Umgebung. Alle in der Distribution enthaltenen Erweiterungen können für ein sauberes, unverfälschtes GNOME-Erlebnis leicht deaktiviert werden. Der Extension Manager ist ebenfalls enthalten, um Ihnen zu helfen, fehlende Erweiterungen zu finden. Die Benutzeroberfläche wurde optimiert, um sauber, intuitiv und effizient zu sein und bietet so von Anfang an ein großartiges Arch-basiertes Benutzererlebnis.",
+                faq_q5: "Ist Linexin eine unveränderliche (immutable) Distribution?",
+                faq_a5: "Nein, Linexin ist keine unveränderliche Distribution. Es wird jedoch mit einer minimalen Anzahl von Systempaketen und ohne grafischen Paketmanager ausgeliefert. Aus diesem Grund wird dem durchschnittlichen Benutzer empfohlen, Flatpaks zu verwenden, während Power-User weiterhin pacman und das AUR frei nutzen können.",
                 community_title: "Open-Source-Projekt",
                 community_subtitle: "Linexin ist mit vollständig quelloffenem Code erstellt. Alles, was Sie nach der Installation sehen, kann von seiner GitHub-Seite geforkt oder modifiziert werden.",
                 community_button: "Zu Linexins GitHub gehen",
@@ -364,7 +499,6 @@
             // --- Mobile menu toggle ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
@@ -373,15 +507,8 @@
             const showcaseImage = document.getElementById('showcase-image');
             const prevButton = document.getElementById('prev-button');
             const nextButton = document.getElementById('next-button');
-
-            const images = [
-                'https://i.ibb.co/GfwZ1x9S/Screenshot-From-2025-07-27-19-46-24.png',
-                'https://i.ibb.co/Qj6prcQr/Screenshot-From-2025-07-27-20-00-53.png',
-                'https://i.ibb.co/6cynj74Y/Screenshot-From-2025-07-27-20-06-24.png',
-                'https://i.ibb.co/6Rb8NhhQ/Screenshot-From-2025-07-27-20-16-48.png'
-            ];
+            const images = ['https://i.ibb.co/GfwZ1x9S/Screenshot-From-2025-07-27-19-46-24.png', 'https://i.ibb.co/Qj6prcQr/Screenshot-From-2025-07-27-20-00-53.png', 'https://i.ibb.co/6cynj74Y/Screenshot-From-2025-07-27-20-06-24.png', 'https://i.ibb.co/6Rb8NhhQ/Screenshot-From-2025-07-27-20-16-48.png'];
             let currentIndex = 0;
-
             function updateImage() {
                 if (showcaseImage) {
                     showcaseImage.style.opacity = '0';
@@ -391,95 +518,62 @@
                     }, 300);
                 }
             }
-
             if (prevButton && nextButton) {
-                prevButton.addEventListener('click', () => {
-                    currentIndex = (currentIndex - 1 + images.length) % images.length;
-                    updateImage();
-                });
-
-                nextButton.addEventListener('click', () => {
-                    currentIndex = (currentIndex + 1) % images.length;
-                    updateImage();
-                });
+                prevButton.addEventListener('click', () => { currentIndex = (currentIndex - 1 + images.length) % images.length; updateImage(); });
+                nextButton.addEventListener('click', () => { currentIndex = (currentIndex + 1) % images.length; updateImage(); });
             }
-            if (showcaseImage) {
-               updateImage();
-            }
-            
+            if (showcaseImage) { updateImage(); }
 
             // --- Language Switcher ---
             const langButtonDesktop = document.getElementById('lang-button-desktop');
             const langMenuDesktop = document.getElementById('lang-menu-desktop');
             const allLangLinks = document.querySelectorAll('a[data-lang]');
-
             const setLanguage = (lang) => {
                 if (!translations[lang]) return;
-
-                // Update text and attributes
                 document.querySelectorAll('[data-translate-key]').forEach(el => {
                     const key = el.getAttribute('data-translate-key');
                     const type = el.getAttribute('data-translate-type');
                     const translation = translations[lang][key];
-
                     if (translation) {
-                        if (type === 'alt') {
-                            el.alt = translation;
-                        } else if (key === 'footer_copy' || key === 'footer_love') {
-                            el.innerHTML = translation;
-                        } else {
-                            el.innerText = translation;
-                        }
+                        if (type === 'alt') { el.alt = translation; } 
+                        else if (key === 'footer_copy' || key === 'footer_love') { el.innerHTML = translation; } 
+                        else { el.innerText = translation; }
                     }
                 });
-
                 document.title = translations[lang].page_title;
-
-                // Update language switcher display
                 document.getElementById('current-lang-desktop').innerText = lang.toUpperCase();
-                
-                // Store preference
                 localStorage.setItem('language', lang);
-
-                // Close menus
                 mobileMenu.classList.add('hidden');
                 langMenuDesktop.classList.add('hidden');
             };
-
-            // Desktop dropdown toggle
-            if(langButtonDesktop){
-                langButtonDesktop.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    langMenuDesktop.classList.toggle('hidden');
-                });
-            }
-
-            // Set language on link click
-            allLangLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const lang = link.getAttribute('data-lang');
-                    setLanguage(lang);
-                });
-            });
-
-            // Hide desktop dropdown when clicking outside
-            document.addEventListener('click', () => {
-                if(langMenuDesktop && !langMenuDesktop.classList.contains('hidden')){
-                   langMenuDesktop.classList.add('hidden');
-                }
-            });
-
-            // Initial load: Set language from storage or default
+            if(langButtonDesktop){ langButtonDesktop.addEventListener('click', (e) => { e.stopPropagation(); langMenuDesktop.classList.toggle('hidden'); }); }
+            allLangLinks.forEach(link => { link.addEventListener('click', (e) => { e.preventDefault(); const lang = link.getAttribute('data-lang'); setLanguage(lang); }); });
+            document.addEventListener('click', () => { if(langMenuDesktop && !langMenuDesktop.classList.contains('hidden')){ langMenuDesktop.classList.add('hidden'); } });
             const savedLang = localStorage.getItem('language');
             const browserLang = navigator.language.split('-')[0];
-            // Set language based on this priority: 1. Saved, 2. Browser (if supported), 3. English
-            if(savedLang && translations[savedLang]) {
-                setLanguage(savedLang);
-            } else if (translations[browserLang]) {
-                setLanguage(browserLang);
-            } else {
-                setLanguage('en');
+            if(savedLang && translations[savedLang]) { setLanguage(savedLang); } 
+            else if (translations[browserLang]) { setLanguage(browserLang); } 
+            else { setLanguage('en'); }
+
+            // --- FAQ Accordion ---
+            const faqAccordion = document.getElementById('faq-accordion');
+            if (faqAccordion) {
+                const questions = faqAccordion.querySelectorAll('.faq-question');
+                questions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        const answer = question.nextElementSibling;
+                        const arrow = question.querySelector('.faq-arrow');
+                        const isHidden = answer.classList.contains('hidden');
+                        
+                        if (isHidden) {
+                            answer.classList.remove('hidden');
+                            arrow.classList.add('rotate-180');
+                        } else {
+                            answer.classList.add('hidden');
+                            arrow.classList.remove('rotate-180');
+                        }
+                    });
+                });
             }
         });
     </script>
