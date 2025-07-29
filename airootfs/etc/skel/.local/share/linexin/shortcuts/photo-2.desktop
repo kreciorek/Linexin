@@ -2,7 +2,7 @@
 Name=Photo 2
 GenericName=Photo on Wine
 Comment=
-Exec=/usr/bin/photo
+Exec=sh -c /usr/bin/photo
 # Change the rum [version] and the [USER] paths to the right directory
 
 Icon=/usr/share/icons/photo.png

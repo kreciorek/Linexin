@@ -2,7 +2,7 @@
 Name=Publisher 2
 GenericName=Publisher on Wine
 Comment=
-Exec=/usr/bin/publisher
+Exec=sh -c /usr/bin/publisher
 # Change the rum [version] and the [USER] paths to the right directory
 
 Icon=/usr/share/icons/publisher.png

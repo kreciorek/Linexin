@@ -2,7 +2,7 @@
 Name=Designer 2
 GenericName=Designer on Wine
 Comment=
-Exec=/usr/bin/designer
+Exec=sh -c /usr/bin/designer
 # Change the rum [version] and the [USER] paths to the right directory
 
 Icon=/usr/share/icons/designer.png
