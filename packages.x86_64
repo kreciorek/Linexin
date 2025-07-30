@@ -184,3 +184,9 @@ ffmpeg
 gstreamer
 python-distro
 showtime
+gst-libav
+gst-plugins-bad
+gst-plugins-ugly
+gst-plugins-base
+gst-plugins-good
+gst-plugin-pipewire
