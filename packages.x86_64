@@ -130,6 +130,7 @@ zsh
 
 #
 # Custom Packages
+
 calamares-git
 ckbcomp
 boost-libs
@@ -183,6 +184,8 @@ davinci-installer
 ffmpeg
 gstreamer
 python-distro
+
+#showtime
 showtime
 gst-libav
 gst-plugins-bad
@@ -190,3 +193,6 @@ gst-plugins-ugly
 gst-plugins-base
 gst-plugins-good
 gst-plugin-pipewire
+
+#Appimagelauncher
+appimagelauncher
