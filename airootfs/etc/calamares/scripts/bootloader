@@ -3,9 +3,6 @@
 # Re-generate initramfs images
 mkinitcpio -P
 
-# Install systemd-boot
-bootctl --esp-path=/boot --boot-path=/boot install
-
 # Create loader configuration
 cat > /boot/loader/loader.conf <<EOF
 default  linexin.conf
