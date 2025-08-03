@@ -1,7 +1,7 @@
 # Linexin
 
 <p align="center">
-  <img src="https://i.imgur.com/usK5M5J.png)" alt="logo" with="200" height="200"/>
+  <img src="https://i.imgur.com/3kusKlW.png" alt="logo" with="200" height="200"/>
 </p>
 <br>
 
