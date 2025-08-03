@@ -185,6 +185,8 @@ ffmpeg
 gstreamer
 python-distro
 pipewire-pulse
+vkd3d
+lib32-vkd3d
 
 #showtime
 showtime
