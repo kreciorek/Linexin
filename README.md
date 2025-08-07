@@ -35,7 +35,7 @@ It depends. Default UI is modified GNOME Desktop Environment to be more user-fri
 
 <h2>How do download?</h2>
 Due to size being bigger than GitHub allows for release, the download is present on the Linexin's webpage only.<br>
-<a href="https://petexy.github.io/Linexin/#showcase">Download Linexin</a>
+<a href="https://petexy.github.io/Linexin">Download Linexin</a>
 
 <h2>Can I just compile the package from this GitHub?</h2>
 Absolutely. Using ArchISO tool, you should be able to get the newest build of Linexin ready to go. However, remember that this is development build. It may not be as stable as selected version upoaded for download.
