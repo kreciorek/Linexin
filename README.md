@@ -40,5 +40,8 @@ Due to size being bigger than GitHub allows for release, the download is present
 <h2>Can I just compile the package from this GitHub?</h2>
 Absolutely. Using ArchISO tool, you should be able to get the newest build of Linexin ready to go. However, remember that this is development build. It may not be as stable as selected version upoaded for download.
 
+<h2>Does it support [...] language?</h2>
+No. While almost whole system will support other languages than English, apps that I've created for this distro are only in English. However, they are ready to be localized manually, but it's not my main focus.
+
 <br><br><br>
 This is a fork of [ArchISO](https://github.com/archlinux/archiso)
