@@ -115,70 +115,69 @@ alias fastfetch="fastfetch -l /usr/share/ascii/ascii_fast.txt --logo-color-1 '38
 
 
 
-
-
-
-
 confirm_makepkg() {
-    # List of makepkg options that shouldn't require a PKGBUILD
     local SAFE_ONLY_FLAGS=(--help -h --version -V --printsrcinfo)
 
-    # If any safe flag is passed, bypass all checks
+
     for arg in "$@"; do
-        for safe in "${SAFE_ONLY_FLAGS[@]}"; do
-            if [[ "$arg" == "$safe" ]]; then
-                command makepkg "$@"
-                return $?
-            fi
-        done
+        if [[ " ${SAFE_ONLY_FLAGS[*]} " =~ " ${arg} " ]]; then
+            command makepkg "$@"
+            return $?
+        fi
     done
 
-    # Check for --neverask
+    local bypass_confirmation=false
+    local handle_neverask=false
+
+
     if [[ -f "$HOME/.makepkg_neverask" ]]; then
+        bypass_confirmation=true
+    fi
+
+
+    for arg in "$@"; do
+        case "$arg" in
+            --noconfirm)
+                bypass_confirmation=true
+                break
+                ;;
+            --neverask)
+                bypass_confirmation=true
+                handle_neverask=true
+                break
+                ;;
+        esac
+    done
+
+
+    if [[ "$handle_neverask" == true ]]; then
+        touch "$HOME/.makepkg_neverask"
+        set -- "${@/--neverask/}"
+    fi
+
+
+    if [[ "$bypass_confirmation" == true ]]; then
         command makepkg "$@"
         return $?
     fi
 
-    # Handle --neverask
-    for arg in "$@"; do
-        if [[ "$arg" == "--neverask" ]]; then
-            touch "$HOME/.makepkg_neverask"
-            set -- "${@/--neverask/}"
-            command makepkg "$@"
-            return $?
-        fi
-    done
-
-    # Check if --noconfirm is passed
-    for arg in "$@"; do
-        if [[ "$arg" == "--noconfirm" ]]; then
-            command makepkg "$@"
-            return $?
-        fi
-    done
 
     local PKGFILE="./PKGBUILD"
-
     if [[ ! -f "$PKGFILE" ]]; then
         echo "No PKGBUILD found in current directory."
         return 1
     fi
 
-    # Show PKGBUILD content
     cat "$PKGFILE"
-
-    # Red colored warning using ANSI escape codes
     echo -e "
 \033[1;31mATTENTION!
-   
-You are about to prepare a package out of the safe repository. 
-Please read the PKGBUILD file provided above CAREFULLY before proceeding further! 
-Otherwise you may get your operating system infected with malware or make it unstable.
+You are about to build a package from the local PKGBUILD shown above.
+Please review the script CAREFULLY before proceeding.
+An unchecked PKGBUILD could harm your system.
 Do you want to continue? (Y/N)\033[0m"
 
-    # Prompt for user input
     read -r -n 1 answer
-    echo  # move to new line
+    echo # New line for cleaner output
 
     if [[ "$answer" == [Yy] ]]; then
         command makepkg "$@"
@@ -187,66 +186,63 @@ Do you want to continue? (Y/N)\033[0m"
         return 0
     fi
 }
-
-# Create alias to use the function
-alias makepkg='confirm_makepkg'
-
-
-
-
-
 
 
 confirm_paru() {
-    # Check for --neverask
-    if [[ -f "$HOME/.makepkg_neverask" ]]; then
-        command makepkg "$@"
+    local bypass_confirmation=false
+    local handle_neverask=false
+
+
+    if [[ -f "$HOME/.paru_neverask" ]]; then
+        bypass_confirmation=true
+    fi
+
+
+    for arg in "$@"; do
+        case "$arg" in
+            --noconfirm)
+                bypass_confirmation=true
+                break
+                ;;
+            --neverask)
+                bypass_confirmation=true
+                handle_neverask=true
+                break
+                ;;
+        esac
+    done
+
+
+    if [[ "$handle_neverask" == true ]]; then
+        touch "$HOME/.paru_neverask"
+        set -- "${@/--neverask/}"
+    fi
+
+
+    if [[ "$bypass_confirmation" == true ]]; then
+        command paru "$@"
         return $?
     fi
 
-    # Handle --neverask
-    for arg in "$@"; do
-        if [[ "$arg" == "--neverask" ]]; then
-            touch "$HOME/.makepkg_neverask"
-            set -- "${@/--neverask/}"
-            command makepkg "$@"
-            return $?
-        fi
-    done
 
-    # Check if --noconfirm is passed
-    for arg in "$@"; do
-        if [[ "$arg" == "--noconfirm" ]]; then
-            command makepkg "$@"
-            return $?
-        fi
-    done
-
-    # Save user command arguments
-    local args=("$@")
-
-    # Red-colored warning message
     echo -e "
 \033[1;31mATTENTION!
-
-You are about to prepare a package out of the safe repository. 
-Please read the PKGBUILD file provided by \"paru\" in next step CAREFULLY before proceeding further! 
-Otherwise you may get your operating system infected with malware or make it unstable.
-
+You are about to build and install packages from the Arch User Repository (AUR).
+Paru will show you the PKGBUILD file(s) next. Please review them CAREFULLY.
+An unchecked PKGBUILD could harm your system.
 Do you want to continue? (Y/N)\033[0m"
 
-    # Prompt user input
     read -r -n 1 answer
-    echo  # new line for cleanliness
+    echo # New line for cleaner output
 
     if [[ "$answer" == [Yy] ]]; then
-        # Proceed with the actual command using saved arguments
-        command paru "${args[@]}"
+        command paru "$@"
     else
         echo "Aborted."
         return 0
     fi
 }
 
-# Alias paru to our function
+
+alias makepkg='confirm_makepkg'
 alias paru='confirm_paru'
