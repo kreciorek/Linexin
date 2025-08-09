@@ -21,7 +21,7 @@ If you're a creator, you probably know that running Affinity suite and DaVinci R
 </ul> <br>
 
 <h2>How does it look like?</h2>
-It depends. Default UI is modified GNOME Desktop Environment to be more user-friendly and familiar to people with muscle memory from other systems. However, There are 4 (at this moment) pesets present that can be easily switched with built-in app called "Change your style"<br><br>
+It depends. Default UI is modified GNOME Desktop Environment to be more user-friendly and familiar to people with muscle memory from other systems. However, There are 4 (at this moment) presets present that can be easily switched with built-in app called "Change your style"<br><br>
 <p align="center">
   <img src="https://i.ibb.co/2YHmv8KD/default.png" alt="default" with="500" height="500"/><br>
   Default look and feel<br><br>
